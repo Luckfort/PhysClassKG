@@ -32,7 +32,7 @@ def Sampling(string_set,total_len):
         create_sample(file_cnt,temp_st)
 
 file_cnt=0
-#共128939个Sample
+#Total 128939 samples
 wk=0
 for root,dirs,files in os.walk(r"./After_scrapy_data"):
     for file in files:

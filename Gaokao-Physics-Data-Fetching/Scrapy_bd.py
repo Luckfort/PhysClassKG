@@ -1,22 +1,9 @@
-# 此爬虫框架出自https://github.com/Alex-gousheng/BaiduWenkuSpider
-#
-#
+# Reference: https://github.com/Alex-gousheng/BaiduWenkuSpider
+
 import requests
 import re
 import json
 import os
-
-# WkInfo.docType = {
-#             '1': 'doc',
-#             '2': 'xls',
-#             '3': 'ppt',
-#             '4': 'docx',
-#             '5': 'xlsx',
-#             '6': 'pptx',
-#             '7': 'pdf',
-#             '8': 'txt',
-
-#         };
 
 url=""
 headers={"User-Agent":"ozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36 Edg/81.0.416.45"}
@@ -197,13 +184,7 @@ def TYPE(docID,urls):
     return doc_type
 
 
-###################################################
-#执行总入口：
-###################################################
 
-
-url=input('请输入想要获取数据的地址(例如：https://wenku.baidu.com/view/d69ca642fbd6195f312b3169a45177232f60e498.html)：\n')
+url=input('Please give me a valid url to crawl (eg: https://wenku.baidu.com/view/d69ca642fbd6195f312b3169a45177232f60e498.html): \n')
 
 TYPE(getID(url),url)
-
-#input("\n请按任意键来结束程序~")

@@ -34,24 +34,6 @@ Chapter_Dict={"第一章":"运动学",
               "第十六章":"光学",
               "第十七章":"",
               "第十八章":"热学"}
-# Chapter_Dict={"第一章":"运动的描述",
-#               "第二章":"相互作用",
-#               "第三章":"牛顿运动定律",
-#               "第四章":"曲线运动",
-#               "第五章":"机械能及其守恒定律",
-#               "第六章":"静电场",
-#               "第七章":"恒定电流",
-#               "第八章":"磁场",
-#               "第九章":"电磁感应",
-#               "第十章":"交变电流&传感器",
-#               "第十一章":"热力学",
-#               "第十二章":"机械振动与机械波",
-#               "第十三章":"动量",
-#               "第十四章":"近代物理",
-#               "第十五章":"光",
-#               "第十六章":"电磁波与相对论",
-#               "第十七章":"波粒二象性",
-#               "第十八章":"物态变化"}
 def save_text(file_cnt,temp_st,tag):
     if(tag=='Null' or tag==''):
         return
@@ -90,7 +72,7 @@ with open('cfg.txt','r',encoding='utf-8') as f:
     js=f.read()
     cfg=json.loads(js)
     f.close()
-#print(cfg)
+
 for dir_0 in dir_set:
     for root,dirs,files in os.walk(r".\\Doc_write\\"+dir_0):
         for file in files:
@@ -98,7 +80,6 @@ for dir_0 in dir_set:
                 continue
             node_name=file.replace('.txt','')
             k_to_ch[node_name]=Chapter_Dict[dir_0]
-#print(k_to_ch)  
 
 for root,dirs,files in os.walk(r"./After_scrapy_data"):
     dir_set=dirs

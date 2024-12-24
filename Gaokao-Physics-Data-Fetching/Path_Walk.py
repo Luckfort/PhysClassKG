@@ -25,12 +25,8 @@ for root,dirs,files in os.walk(r"./Doc_write"):
     for file in files:
         if (file.find('.txt')!=-1):
             continue
-        #获取文件所属目录
-        #print(root)
-        #获取文件路径
         docx_file=os.path.join(root,file)
         txt_file=docx_file.replace(".docx",".txt")
-        #print(docx_file)
         Docx_Txt(docx_file,txt_file)
         with open(txt_file,'r',encoding='utf-8') as f1:
             text_set=f1.readlines()
